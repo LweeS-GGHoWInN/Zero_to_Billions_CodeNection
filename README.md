@@ -116,7 +116,7 @@ For example
 ### 2.3 Mentor Consultation
 
 | Date | Mentor | Feedback Received | What Was Changed |
-
+|---|---|---|---|
 | **31 Aug 2026** | **Khor Jia Quan** | The original feature list was too large. Focus on an MVP and prioritise the core workflow. The team had more web experience than mobile experience, so the prototype should stay realistic. | We reduced the early 18-feature concept, focused on the core workload flow and changed AI schedule editing into user-approved recommendations. |
 | **6 Sep 2026** | **Tay Ming En** | Use less red because strong red can make the UI feel stressful. The app also needed a clearer unique selling point. Quick Reset could be developed further and simple animation could make the experience more interactive. | The interface moved toward a softer beige/coral style. Quick Reset was expanded and interactive recovery ideas such as Lumi were strengthened. |
 | **8 Sep 2026** | **Teng Wei Herr** | “Get to Know More” was not needed. The team could continue extending the LoadShield direction. React Native, Expo and Supabase were suggested for development. | We removed the unnecessary section, developed LoadShield and Pressure Digest further and selected React Native + Expo + Supabase as the main development stack. |
