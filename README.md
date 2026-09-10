@@ -30,8 +30,8 @@ Existing apps usually solve only one part of the problem. For example, task-mana
 - **Daily Check-In** — Students update sleep quality, social battery and mental load before starting the day.
 - **Live State Override** — Students can manually update their current state later from the Home Dashboard.
 - **Task & Deadline Input** — Students can add tasks, dates, priorities, categories and estimated time.
-- **5-Dimension Workload Analysis** — The system considers Mental, Time, Physical, Social and Errand load when analysing the day, this feature is used for AI analysis, it won't be showed to the users.
-- **Overload / Stress Detection** — LoadLight identifies high-risk periods and can trigger a schedule alert.
+- **Internal Workload Analysis** — LoadLight combines the user's baseline profile, Daily Check-In and task information to analyse workload in the background. The detailed workload indicators are not shown to users, helping keep the interface simple and avoid creating extra stress.
+- **Overload / Stress Detection** — LoadLight quietly analyses the user's current state and workload. When possible overload is detected, the system can trigger a gentle stress alert and suggest a Quick Reset.
 - **Quick Reset** — Students can enter from the Home Dashboard or from an AI-generated stress alert and use a short recovery activity.
 - **Lumi Session** — Students can start a task with Lumi, use a countdown session and receive a tension-release prompt when working for too long.
 - **AI Rebalance** — AI suggests schedule changes, explains why they help and shows a Before vs After view.
@@ -49,13 +49,13 @@ Existing apps usually solve only one part of the problem. For example, task-mana
 The idea changed several times during the design process. The table below places the ideas used in the final prototype first, followed by ideas that were changed, postponed or dropped.
 
 | Idea | Why it was kept / dropped |
-
+|---|---|
 | **Daily Check-In — Kept** | Gives the system a simple daily picture of the student's current condition. |
 | **Baseline Profile — Kept** | Helps the system understand the user's normal routine before making later recommendations. |
 | **Manual State Override — Kept** | A student's condition can change during the day, so the live state should not stay fixed after the morning check-in. |
-| **Task & Deadline Input — Kept** | Core workload data is needed before the system can analyse risk or suggest changes. |
+｜ **Task & Deadline Input — Kept** | Core workload data is needed before the system can analyse risk or suggest changes.
 | **Internal Workload Analysis — Kept, but moved to background** | The system still considers different types of load together with baseline, Daily Check-In and task information. However, the detailed load map is no longer shown to users because displaying too many workload indicators may create extra stress. |
-| **Overload Risk Indicator — Kept** | HLoadLight analyses the user's current condition and workload quietly in the background. If the system detects that the user may be overloaded, it can trigger a gentle stress alert and suggest Quick Reset or AI Rebalance. |
+| **Overload Risk Detection — Kept** | LoadLight analyses the user's current condition and workload quietly in the background. If possible overload is detected, the system can trigger a gentle stress alert and suggest Quick Reset. The same analysis also supports AI Rebalance when the user chooses to open it. |
 | **AI Rebalance — Kept** | Helps students reduce overloaded periods instead of only showing that they are busy. |
 | **Before vs After Schedule — Kept** | Makes the AI recommendation easy to understand before the student decides. |
 | **User-Approved Schedule Change — Kept** | Keeps the student in control. AI suggests changes but does not force them. |
@@ -187,7 +187,7 @@ LoadLight is not designed as only a to-do list, meditation app or notification b
 ### Key Differences
 
 1. **Understands the whole load**  
-   LoadLight combines tasks with the user's current state instead of judging workload only by the number of tasks.
+   LoadLight combines tasks with the user's current state instead of judging workload only by the number of tasks. This analysis happens quietly in the background instead of showing the user a complex workload dashboard.
 
 2. **Supports the student while work is happening**  
    Lumi Session starts when the student actually begins a task, so LoadLight can support the student during the work session instead of only during planning.
@@ -205,7 +205,7 @@ LoadLight is not designed as only a to-do list, meditation app or notification b
    Daily state, task load, recovery and interruption management use the same user context instead of operating as separate tools.
 
 ### Simple Comparison
-
+|---|---|
 | Capability                    | Typical Task App | Wellness App | Focus / DND Tool | **LoadLight** |
 | Tasks & deadlines             |            ✓     |              |                  |         ✓        |
 | Daily wellbeing state         |                  |      ✓       |                  |         ✓        |
@@ -242,8 +242,8 @@ LoadLight is not designed as only a to-do list, meditation app or notification b
 1. The user signs in and the baseline profile is stored in Supabase.
 2. The Daily Check-In updates the student's current state.
 3. Tasks and deadlines are stored together with priority, category and estimated time.
-4. LoadLight combines baseline data, daily state and task data to estimate workload risk.
-5. If the load is high, the app can show a stress alert or prepare AI Rebalance suggestions.
+4. LoadLight combines baseline data, Daily Check-In and task data to analyse workload risk internally. The detailed workload indicators are not shown to the user.
+5. If possible overload is detected, LoadLight can show a gentle stress alert and suggest Quick Reset.
 6. AI Rebalance sends only the required structured context through the backend proxy to the AI service, then returns proposed changes and explanations.
 7. The student accepts or rejects the changes.
 8. Lumi Session and Quick Reset provide recovery support during the day.
@@ -251,7 +251,7 @@ LoadLight is not designed as only a to-do list, meditation app or notification b
 
 ### 5.4 Build Plan & Scope
 
-The earlier pre-prototype focused on a smaller MVP of Daily Check-In, Task Input, Workload Analysis, Risk Detection, Smart Rebalance and Before/After comparison. After later mentor feedback and UI iteration, the final prototype keeps that core but adds **Quick Reset, Lumi Session and LoadShield** because these features make the idea more complete and more different from a normal productivity app.
+The earlier pre-prototype focused on a smaller MVP of Daily Check-In, Task Input, Internal Workload Analysis， Risk Detection, Smart Rebalance and Before/After comparison. After later mentor feedback and UI iteration, the final prototype keeps that core but adds **Quick Reset, Lumi Session and LoadShield** because these features make the idea more complete and more different from a normal productivity app.
 
 For the building phase, we plan to build the following demo-ready scope:
 
@@ -294,7 +294,7 @@ To keep the build realistic, the following ideas are not required for the first 
 - Reward / cosmetic gamification
 - Advanced automatic task carry-over
 - Connection to Apple Watch 
-- Sync to Campus Website and Emails
+- Sync to Campus Website and Student Emails
 
 These ideas can be revisited after the main LoadLight workflow is working reliably.
 
