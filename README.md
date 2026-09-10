@@ -54,8 +54,8 @@ The idea changed several times during the design process. The table below places
 | **Baseline Profile — Kept** | Helps the system understand the user's normal routine before making later recommendations. |
 | **Manual State Override — Kept** | A student's condition can change during the day, so the live state should not stay fixed after the morning check-in. |
 | **Task & Deadline Input — Kept** | Core workload data is needed before the system can analyse risk or suggest changes. |
-| **5-Dimension Load Analysis — Kept** | Gives a wider view than task count alone by considering Mental, Time, Physical, Social and Errand load. |
-| **Overload Risk Indicator — Kept** | Helps the system identify when the student may need support. |
+| **Internal Workload Analysis — Kept, but moved to background** | The system still considers different types of load together with baseline, Daily Check-In and task information. However, the detailed load map is no longer shown to users because displaying too many workload indicators may create extra stress. |
+| **Overload Risk Indicator — Kept** | HLoadLight analyses the user's current condition and workload quietly in the background. If the system detects that the user may be overloaded, it can trigger a gentle stress alert and suggest Quick Reset or AI Rebalance. |
 | **AI Rebalance — Kept** | Helps students reduce overloaded periods instead of only showing that they are busy. |
 | **Before vs After Schedule — Kept** | Makes the AI recommendation easy to understand before the student decides. |
 | **User-Approved Schedule Change — Kept** | Keeps the student in control. AI suggests changes but does not force them. |
