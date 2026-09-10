@@ -223,14 +223,13 @@ LoadLight is not designed as only a to-do list, meditation app or notification b
 ### 5.1 Tech Stack
 
 | Area | Technology | Why We Chose It | Expected Constraints |
-
+|---|---|---|---|
 | **Frontend** | React Native | One codebase can target both Android and iOS. It is suitable for a mobile-first version of LoadLight. | The team is new to React Native, so there will be a learning curve. Some device-level functions may need native configuration. |
 | **Development Framework** | Expo | Speeds up setup, testing and mobile prototyping. | Some advanced notification or background features may require an Expo development build or extra native permissions instead of only Expo Go. |
 | **Backend / Database / Authentication** | Supabase | Provides authentication, PostgreSQL database, storage and backend services in one platform. The free tier is suitable for a hackathon prototype. | Free-tier limits apply, and the team must design database access rules carefully. |
 | **AI Service** | DeepSeek API | Lower cost makes it practical for prototype AI suggestions and explanations. | Requires internet access, API latency must be handled, and the API key must not be stored directly inside the mobile app. |
-| **API Proxy / Server Logic** | Supabase Edge Functions | Can keep API keys away from the client and send selected task/state data to the AI service. | Adds backend setup and request limits. |
-| **Development Assistance** | Codex | Helps the team understand code, generate implementation drafts and debug while learning the new stack. | Codex is a development tool, not the production AI engine inside the app. All generated code still needs testing. |
-| **Mobile Build / Demo** | Expo development build / EAS | Suitable for testing and sharing the hackathon mobile build. | Device permissions and platform differences must be tested on real devices. |
+| **API Proxy / Server Logic** | Supabase Edge Functions | Keeps API keys away from the client and sends only required task and state data to the AI service. | Adds backend setup and request limits. |
+| **Mobile Build / Demo** | Expo Development Build / EAS | Suitable for testing and sharing the hackathon mobile build. | Device permissions and platform differences must be tested on real devices. |
 
 ### 5.2 System Architecture Diagram
 
