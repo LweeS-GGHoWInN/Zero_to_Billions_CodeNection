@@ -205,16 +205,16 @@ LoadLight is not designed as only a to-do list, meditation app or notification b
    Daily state, task load, recovery and interruption management use the same user context instead of operating as separate tools.
 
 ### Simple Comparison
-|---|---|
-| Capability                    | Typical Task App | Wellness App | Focus / DND Tool | **LoadLight** |
-| Tasks & deadlines             |            ✓     |              |                  |         ✓        |
-| Daily wellbeing state         |                  |      ✓       |                  |         ✓        |
-| Workload risk analysis        |       Limited    |              |                  |         ✓        |
-| AI schedule rebalance         |                  |              |                  |         ✓        |
-| Recovery interaction          |                  |      ✓       |                  |         ✓        |
-| Task execution support        |      Limited          |              |             | ✓ Lumi Session   |
-| Notification protection       |                  |              |                ✓ |     ✓ LoadShield |
-| Urgent vs non-urgent digest   |                  |              |          Limited |         ✓        |
+| Capability | Typical Task App | Wellness App | Focus / DND Tool | **LoadLight** |
+|---|:---:|:---:|:---:|:---:|
+| Tasks & deadlines | ✓ |  |  | ✓ |
+| Daily wellbeing state |  | ✓ |  | ✓ |
+| Workload risk analysis | Limited |  |  | ✓ |
+| AI schedule rebalance |  |  |  | ✓ |
+| Recovery interaction |  | ✓ |  | ✓ |
+| Task execution support | Limited |  |  | ✓ Lumi Session |
+| Notification protection |  |  | ✓ | ✓ LoadShield |
+| Urgent vs non-urgent digest |  |  | Limited | ✓ |
 
 ---
 
