@@ -234,6 +234,7 @@ LoadLight is not designed as only a to-do list, meditation app or notification b
 
 ### 5.2 System Architecture Diagram
 
+![System Architecture Diagram](assets/14_system_arch_diagram.png)
 
 
 ### 5.3 How the Main Data Flow Works
@@ -250,7 +251,7 @@ LoadLight is not designed as only a to-do list, meditation app or notification b
 
 ### 5.4 Build Plan & Scope
 
-The earlier pre-prototype document focused on a smaller MVP of Daily Check-In, Task Input, Workload Analysis, Risk Detection, Smart Rebalance and Before/After comparison. After later mentor feedback and UI iteration, the final prototype keeps that core but adds **Quick Reset, Lumi Session and LoadShield** because these features make the idea more complete and more different from a normal productivity app.
+The earlier pre-prototype focused on a smaller MVP of Daily Check-In, Task Input, Workload Analysis, Risk Detection, Smart Rebalance and Before/After comparison. After later mentor feedback and UI iteration, the final prototype keeps that core but adds **Quick Reset, Lumi Session and LoadShield** because these features make the idea more complete and more different from a normal productivity app.
 
 For the building phase, we plan to build the following demo-ready scope:
 
@@ -292,6 +293,8 @@ To keep the build realistic, the following ideas are not required for the first 
 - Mini games
 - Reward / cosmetic gamification
 - Advanced automatic task carry-over
+- Connection to Apple Watch 
+- Sync to Campus Website and Emails
 
 These ideas can be revisited after the main LoadLight workflow is working reliably.
 
