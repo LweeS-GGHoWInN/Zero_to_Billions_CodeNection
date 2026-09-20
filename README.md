@@ -4,7 +4,7 @@ This is a repository for Zero to Billions
 **Team:** Lwee Wee Ming, Liew Jing Lin, So Ern Ning, Tee Wei Xi  
 **Problem Statement:** Stress & Workload Manager  
 **Video Presentation:** -
-**Presentation Slides:** https://canva.link/pz5cqcucu9ryriv
+**Presentation Slides:** -
 
 ---
 
